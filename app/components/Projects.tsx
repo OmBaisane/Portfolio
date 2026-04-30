@@ -29,6 +29,10 @@ export default function Projects() {
           <motion.div
             key={i}
             whileHover={{ scale: 1.03 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
             className={`border border-gray-800 p-6 rounded-2xl ${project.title === "DevPostify" ? "border-white scale-105" : "border-gray-800"} hover:border-gray-500 transition`}
           >
             <h3 className="text-xl font-semibold">{project.title}</h3>
