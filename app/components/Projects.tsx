@@ -7,15 +7,15 @@ const projects = [
     title: "DevPostify",
     desc: "A full-stack social platform with authentication, CRUD posts and production deployment.",
     tech: "Next.js, MongoDB, Tailwind",
-    live: "#",
-    github: "#",
+    live: "https://dev-postify.vercel.app/",
+    github: "https://github.com/OmBaisane/DevPostify",
   },
   {
     title: "TaskZen",
     desc: "A modern task manager with filtering, persistence and clean UI/UX.",
     tech: "React, TypeScript, Tailwind",
-    live: "#",
-    github: "#",
+    live: "https://task-zen-omega.vercel.app/",
+    github: "https://github.com/OmBaisane/TaskZen",
   },
 ];
 
