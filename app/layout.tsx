@@ -1,6 +1,11 @@
-import Footer from "@/app/components/Footer";
-import Navbar from "@/app/components/Navbar";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import { Geist } from "next/font/google";
+
+const geist = Geist({
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
@@ -9,10 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-black text-white">
+      <body className={`${geist.className} bg-black text-white`}>
         <Navbar />
 
-        <main>{children}</main>
+        {children}
 
         <Footer />
       </body>

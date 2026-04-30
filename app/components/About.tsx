@@ -4,16 +4,15 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section className="py-20 px-6 max-w-3xl mx-auto text-center">
+    <section className="py-24 px-6 max-w-4xl mx-auto text-center">
       <h2 className="text-3xl font-bold mb-6">About Me</h2>
 
       <motion.p
         initial={{ opacity: 0, y: 40 }}
-        whileHover={{ opacity: 1 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="text-gray-400 leading-relaxed"
+        className="text-gray-300 leading-relaxed"
       >
         I’m a frontend developer focused on building modern, scalable web
         applications using Next.js and TypeScript.
