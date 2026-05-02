@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Geist, Inter } from "next/font/google";
+import ScrollProgress from "./components/ScrollProgress";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-black text-white`}>
+        <ScrollProgress />
         <Navbar />
 
         {children}
