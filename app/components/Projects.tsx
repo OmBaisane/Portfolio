@@ -7,6 +7,7 @@ const projects = [
     title: "DevPostify",
     desc: "A full-stack social platform with authentication, CRUD posts and production deployment.",
     tech: "Next.js, MongoDB, Tailwind",
+    image: "/DevPostify.png",
     live: "https://dev-postify.vercel.app/",
     github: "https://github.com/OmBaisane/DevPostify",
   },
@@ -14,6 +15,7 @@ const projects = [
     title: "TaskZen",
     desc: "A modern task manager with filtering, persistence and clean UI/UX.",
     tech: "React, TypeScript, Tailwind",
+    image: "/TaskZen.png",
     live: "https://task-zen-omega.vercel.app/",
     github: "https://github.com/OmBaisane/TaskZen",
   },
@@ -23,7 +25,9 @@ export default function Projects() {
   return (
     <section id="projects" className="py-24">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-12 font-[geist]">Projects</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 font-[geist]">
+          Projects
+        </h2>
 
         <div className="grid md:grid-cols-2 gap-8 transition-all duration-300">
           {projects.map((project, i) => (
@@ -34,9 +38,16 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.2 }}
               viewport={{ once: true }}
-              className={`p-6 rounded-2xl border transition-all duration-300 ${project.title === "DevPostify" ? "border-white scale-105" : "border-gray-800 hover:border-gray-500"}`}
+              className={`p-6 rounded-2xl border transition-all duration-300 hover:shadow-xl hover:shadow-white/5 ${project.title === "DevPostify" ? "border-white scale-105" : "border-gray-800 hover:border-gray-500"}`}
             >
-              <h3 className="text-xl font-semibold font-[geist]">{project.title}</h3>
+              <img
+                src={project.image}
+                alt={project.title}
+                className="rounded-xl mb-4 border border-gray-800"
+              />
+              <h3 className="text-xl font-semibold font-[geist]">
+                {project.title}
+              </h3>
 
               <p className="text-gray-300 mt-2">{project.desc}</p>
 
