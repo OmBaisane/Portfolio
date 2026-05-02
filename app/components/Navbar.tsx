@@ -12,15 +12,15 @@ export default function Navbar() {
       <h1 className="font-bold text-xl hover:text-gray-400 transition">Om</h1>
 
       <div className="flex gap-6 text-sm">
-        <a href="#projects" className="hover:text-gray-400">
-          Projects
-        </a>
-        <a href="#skills" className="hover:text-gray-400">
-          Skills
-        </a>
-        <a href="#contact" className="hover:text-gray-400">
-          Contact
-        </a>
+        {["projects", "skills", "contact"].map((item) => (
+          <a
+            key={item}
+            href={`#${item}`}
+            className="relative text-gray-400 hover:text-white transition after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-white after:transition-all hover:after:w-full"
+          >
+            {item.charAt(0).toUpperCase() + item.slice(1)}
+          </a>
+        ))}
       </div>
     </motion.nav>
   );

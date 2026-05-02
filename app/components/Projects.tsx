@@ -25,29 +25,30 @@ export default function Projects() {
   return (
     <section id="projects" className="py-24">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-12 font-[geist]">
-          Projects
-        </h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Projects</h2>
 
-        <div className="grid md:grid-cols-2 gap-8 transition-all duration-300">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, i) => (
             <motion.div
               key={i}
-              whileHover={{ y: -5, scale: 1.02 }}
+              whileHover={{ y: -6 }}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className={`p-6 rounded-2xl border transition-all duration-300 hover:shadow-xl hover:shadow-white/5 ${project.title === "DevPostify" ? "border-white scale-105" : "border-gray-800 hover:border-gray-500"}`}
+              className={`p-6 rounded-2xl border transition-all duration-300 ${
+                project.title === "DevPostify"
+                  ? "border-white"
+                  : "border-gray-800 hover:border-gray-500"
+              }`}
             >
               <img
                 src={project.image}
                 alt={project.title}
                 className="rounded-xl mb-4 border border-gray-800"
               />
-              <h3 className="text-xl font-semibold font-[geist]">
-                {project.title}
-              </h3>
+
+              <h3 className="text-xl font-semibold">{project.title}</h3>
 
               <p className="text-gray-300 mt-2">{project.desc}</p>
 
@@ -55,7 +56,7 @@ export default function Projects() {
 
               <div className="flex gap-4 mt-5">
                 <a href={project.live} target="_blank">
-                  <button className="px-4 py-2 bg-white text-black rounded-lg">
+                  <button className="px-4 py-2 bg-white text-black rounded-lg transition-all duration-300 hover:scale-105">
                     Live
                   </button>
                 </a>
