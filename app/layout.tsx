@@ -1,9 +1,12 @@
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { Geist } from "next/font/google";
+import { Geist, Inter } from "next/font/google";
 
 const geist = Geist({
+  subsets: ["latin"],
+});
+const inter = Inter({
   subsets: ["latin"],
 });
 
@@ -14,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${geist.className} bg-black text-white`}>
+      <body className={`${inter.className} bg-black text-white`}>
         <Navbar />
 
         {children}

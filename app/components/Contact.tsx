@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function Contact() {
   return (
     <section id="contact" className="py-24 px-6 text-center">
-      <h2 className="text-3xl font-bold mb-6">Contact</h2>
+      <h2 className="text-3xl font-bold mb-6 font-[geist]">Contact</h2>
 
       <p className="text-gray-300 mb-6">
         Feel free to reach out for opportunities or collaborations.

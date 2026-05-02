@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function About() {
   return (
     <section className="py-24 px-6 max-w-4xl mx-auto text-center">
-      <h2 className="text-3xl font-bold mb-6">About Me</h2>
+      <h2 className="text-3xl font-bold mb-6 font-[geist]">About Me</h2>
 
       <motion.p
         initial={{ opacity: 0, y: 40 }}

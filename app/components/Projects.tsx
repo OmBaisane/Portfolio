@@ -23,7 +23,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-24">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-12">Projects</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 font-[geist]">Projects</h2>
 
         <div className="grid md:grid-cols-2 gap-8 transition-all duration-300">
           {projects.map((project, i) => (
@@ -36,7 +36,7 @@ export default function Projects() {
               viewport={{ once: true }}
               className={`p-6 rounded-2xl border transition-all duration-300 ${project.title === "DevPostify" ? "border-white scale-105" : "border-gray-800 hover:border-gray-500"}`}
             >
-              <h3 className="text-xl font-semibold">{project.title}</h3>
+              <h3 className="text-xl font-semibold font-[geist]">{project.title}</h3>
 
               <p className="text-gray-300 mt-2">{project.desc}</p>
 

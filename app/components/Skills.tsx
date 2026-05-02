@@ -15,7 +15,7 @@ const skills = [
 export default function Skills() {
   return (
     <section id="skills" className="py-24 px-6 text-center">
-      <h2 className="text-3xl font-bold mb-10">Skills</h2>
+      <h2 className="text-3xl font-bold mb-10 font-[geist]">Skills</h2>
 
       <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
         {skills.map((skill, i) => (
