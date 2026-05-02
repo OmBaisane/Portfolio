@@ -30,16 +30,30 @@ export default function Projects() {
           <h2 className="text-3xl font-bold text-center mb-12">Projects</h2>
         </Reveal>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.2,
+              },
+            },
+          }}
+          className="grid md:grid-cols-2 gap-8"
+        >
           {projects.map((project, i) => (
             <Reveal>
               <motion.div
                 key={i}
+                variants={{
+                  hidden: { opacity: 0, y: 40 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                transition={{ duration: 0.3 }}
                 whileHover={{ y: -6 }}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
                 className={`p-6 rounded-2xl border transition-all duration-300 ${
                   project.title === "DevPostify"
                     ? "border-white"
@@ -74,7 +88,7 @@ export default function Projects() {
               </motion.div>
             </Reveal>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
