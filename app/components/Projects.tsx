@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Reveal from "./Reveal";
+import Image from "next/image";
 
 const projects = [
   {
@@ -61,9 +62,11 @@ export default function Projects() {
                   : "border-gray-800 hover:border-gray-500"
               }`}
             >
-              <img
+              <Image
                 src={project.image}
                 alt={project.title}
+                width={500}
+                height={300}
                 className="w-full h-48 object-cover rounded-xl mb-4 border border-gray-800"
               />
 
