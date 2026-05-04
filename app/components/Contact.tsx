@@ -5,40 +5,33 @@ import Reveal from "./Reveal";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 px-6 text-center">
+    <section id="contact" className="pt-20 pb-16 px-6 text-center">
       <div className="max-w-3xl mx-auto">
         <Reveal>
-          <motion.h2
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold mb-10 tracking-tight"
-          >
+          <h2 className="text-3xl font-bold mb-8 tracking-tight">
             Let’s Work Together
-          </motion.h2>
+          </h2>
         </Reveal>
 
         <motion.p
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           viewport={{ once: true }}
           className="text-gray-300 mb-8"
         >
-          I'm currently open to internship and frontend developer opportunities.
-          If you have a project, idea or role — feel free to reach out.
+          I'm currently open to internship and frontend opportunities. Feel free
+          to reach out.
         </motion.p>
 
-        {/* Buttons */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.3 }}
           className="flex justify-center gap-4 flex-wrap"
         >
           <a href="mailto:ombaisane29@gmail.com">
-            <button className="px-6 py-3 bg-white text-black rounded-xl transition-all duration-300 hover:scale-105">
+            <button className="px-6 py-3 bg-white text-black rounded-xl hover:scale-105 transition">
               Email Me
             </button>
           </a>
@@ -53,7 +46,8 @@ export default function Contact() {
           </a>
         </motion.div>
       </div>
-      <div className="h-px bg-linear-to-r from-transparent via-gray-700 to-transparent mt-16 mb-0" />
+
+      <div className="h-px bg-linear-to-r from-transparent via-gray-700 to-transparent mt-16" />
     </section>
   );
 }

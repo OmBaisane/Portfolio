@@ -1,7 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="py-12 border-t border-gray-800 text-center text-sm text-gray-400">
-      <p>&copy; {new Date().getFullYear()} Om Baisane.</p>
+    <footer className="py-10 border-t border-gray-800 text-center text-sm text-gray-400">
+      <p className="tracking-tight">
+        &copy; {new Date().getFullYear()} Om Baisane
+      </p>
 
       <div className="flex justify-center gap-6 mt-4">
         <a

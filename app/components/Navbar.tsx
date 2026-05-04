@@ -12,7 +12,7 @@ export default function Navbar() {
       <h1 className="font-bold text-xl hover:text-gray-400 transition">Om</h1>
 
       <div className="flex gap-6 text-sm">
-        {["projects", "skills", "contact"].map((item) => (
+        {["projects", "skills", "about", "contact"].map((item) => (
           <a
             key={item}
             href={`#${item}`}
