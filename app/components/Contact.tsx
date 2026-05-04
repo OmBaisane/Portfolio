@@ -1,28 +1,55 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Reveal from "./Reveal";
 
 export default function Contact() {
   return (
     <section id="contact" className="py-24 px-6 text-center">
-      <Reveal>
-        <h2 className="text-3xl font-bold mb-6 font-[geist]">Contact</h2>
-      </Reveal>
-
-      <Reveal>
-        <p className="text-gray-300 mb-6">
-          Feel free to reach out for opportunities or collaborations.
-        </p>
-
-        <motion.a
-          whileHover={{ scale: 1.05 }}
-          href="mailto:ombaisane29@gmail.com"
-          className="inline-block px-6 py-3 bg-white text-black rounded-xl shadow-lg"
+      <div className="max-w-2xl mx-auto">
+        <motion.h2
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-3xl font-bold mb-6"
         >
-          Say Hello
-        </motion.a>
-      </Reveal>
+          Let’s Work Together
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-gray-300 mb-8"
+        >
+          I'm currently open to internship and frontend developer opportunities.
+          If you have a project, idea or role — feel free to reach out.
+        </motion.p>
+
+        {/* Buttons */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="flex justify-center gap-4 flex-wrap"
+        >
+          <a href="mailto:ombaisane29@gmail.com">
+            <button className="px-6 py-3 bg-white text-black rounded-xl transition-all duration-300 hover:scale-105">
+              Email Me
+            </button>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/om-baisane-b96625346"
+            target="_blank"
+          >
+            <button className="px-6 py-3 border border-gray-600 rounded-xl hover:border-gray-400 transition">
+              LinkedIn
+            </button>
+          </a>
+        </motion.div>
+      </div>
     </section>
   );
 }
