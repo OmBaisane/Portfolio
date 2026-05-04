@@ -1,20 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Reveal from "./Reveal";
 
 export default function Contact() {
   return (
     <section id="contact" className="py-24 px-6 text-center">
-      <div className="max-w-2xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-3xl font-bold mb-6"
-        >
-          Let’s Work Together
-        </motion.h2>
+      <div className="max-w-3xl mx-auto">
+        <Reveal>
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-3xl font-bold mb-10 tracking-tight"
+          >
+            Let’s Work Together
+          </motion.h2>
+        </Reveal>
 
         <motion.p
           initial={{ opacity: 0, y: 40 }}
@@ -50,6 +53,7 @@ export default function Contact() {
           </a>
         </motion.div>
       </div>
+      <div className="h-px bg-linear-to-r from-transparent via-gray-700 to-transparent mt-16 mb-0" />
     </section>
   );
 }

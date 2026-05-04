@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Reveal from "./Reveal";
 
 const skills = [
   {
@@ -19,9 +20,11 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-6">
+    <section id="skills" className="pt-20 pb-16 px-6">
       <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-12">Skills</h2>
+        <Reveal>
+          <h2 className="text-3xl font-bold mb-10 tracking-tight">Skills</h2>
+        </Reveal>
 
         <div className="grid md:grid-cols-3 gap-8">
           {skills.map((group, i) => (
@@ -49,6 +52,7 @@ export default function Skills() {
           ))}
         </div>
       </div>
+      <div className="h-px bg-linear-to-r from-transparent via-gray-700 to-transparent mt-16 mb-0" />
     </section>
   );
 }

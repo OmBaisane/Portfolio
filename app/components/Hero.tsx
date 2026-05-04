@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-linear-to-b from-black to-zinc-900">
+    <section className="pt-32 pb-20 flex flex-col justify-center items-center text-center px-6 bg-linear-to-b from-black to-zinc-900">
       {/* Name */}
       <motion.h1
         initial={{ opacity: 0, y: 30 }}
