@@ -18,17 +18,20 @@ export default function About() {
           viewport={{ once: true }}
           className="text-gray-300 leading-relaxed"
         >
-          I'm a frontend developer who enjoys building clean, modern and
-          user-friendly web applications using React, TypeScript and Next.js.
+          I'm a Full-Stack JavaScript Developer focused on building modern,
+          scalable and user-friendly web applications with React, Next.js,
+          TypeScript and MongoDB.
           <br />
           <br />
-          I’ve worked on real-world projects with authentication, CRUD
-          operations and responsive UI, focusing on performance and user
-          experience.
+          I've developed real-world projects ranging from task management
+          applications to full-stack social platforms and client-facing
+          e-commerce solutions, with a strong focus on clean architecture,
+          performance and user experience.
           <br />
           <br />
-          Currently, I'm expanding into full-stack development and working
-          towards becoming a MERN stack developer.
+          Currently, I'm advancing my expertise in full-stack development while
+          building production-ready applications and preparing for professional
+          software engineering opportunities.
         </motion.p>
       </div>
 

@@ -3,11 +3,29 @@
 import { motion } from "framer-motion";
 import Reveal from "./Reveal";
 
-const projects = [
+type Project = {
+  title: string;
+  desc: string;
+  image: string;
+  live: string;
+  github: string;
+  features: string[];
+  featured?: boolean;
+  client?: boolean;
+};
+
+const projects: Project[] = [
   {
-    title: "Shiv Fashion Store ⭐",
-    desc: "First client project. A full-stack e-commerce platform featuring product management, order management, admin dashboard, authentication, Cloudinary uploads and production deployment.",
-    tech: "Next.js, TypeScript, MongoDB, Cloudinary",
+    title: "Shiv Fashion Store",
+    featured: true,
+    client: true,
+    desc: "Designed and developed a full-stack e-commerce platform for a real client featuring authentication, product management, order management, Cloudinary uploads and an admin dashboard.",
+    features: [
+      "Authentication",
+      "Admin Dashboard",
+      "Cloudinary",
+      "Order Management",
+    ],
     image: "/ShivFashion.png",
     live: "https://shiv-fashion-store.vercel.app/",
     github: "https://github.com/OmBaisane/shiv-fashion-store",
@@ -15,8 +33,9 @@ const projects = [
 
   {
     title: "DevPostify",
+    featured: true,
     desc: "A full-stack social platform with authentication, CRUD posts, MongoDB integration and production deployment.",
-    tech: "Next.js, MongoDB, Tailwind",
+    features: ["Authentication", "CRUD Posts", "MongoDB", "Responsive UI"],
     image: "/DevPostify.PNG",
     live: "https://dev-postify.vercel.app/",
     github: "https://github.com/OmBaisane/DevPostify",
@@ -25,7 +44,7 @@ const projects = [
   {
     title: "TaskZen",
     desc: "A modern task manager with filtering, persistence and clean UI/UX.",
-    tech: "React, TypeScript, Tailwind",
+    features: ["CRUD", "TypeScript", "Filtering", "Local Storage"],
     image: "/TaskZen.png",
     live: "https://task-zen-omega.vercel.app/",
     github: "https://github.com/OmBaisane/TaskZen",
@@ -66,7 +85,7 @@ export default function Projects() {
               transition={{ duration: 0.3 }}
               whileHover={{ y: -6 }}
               className={`p-6 rounded-2xl border transition-all duration-300 ${
-                project.title.includes("⭐") || project.title === "DevPostify"
+                project.featured
                   ? "border-white"
                   : "border-gray-800 hover:border-gray-500"
               }`}
@@ -79,9 +98,32 @@ export default function Projects() {
 
               <h3 className="text-xl font-semibold">{project.title}</h3>
 
-              <p className="text-gray-300 mt-2">{project.desc}</p>
+              <div className="flex gap-2 mt-2 flex-wrap">
+                {project.featured && (
+                  <span className="px-2 py-1 text-xs rounded-full bg-white text-black">
+                    Featured
+                  </span>
+                )}
 
-              <p className="text-sm mt-3 text-gray-500">{project.tech}</p>
+                {project.client && (
+                  <span className="px-2 py-1 text-xs rounded-full border border-green-500 text-green-400">
+                    Client Project
+                  </span>
+                )}
+              </div>
+
+              <p className="text-gray-300 mt-3">{project.desc}</p>
+
+              <div className="flex flex-wrap gap-2 mt-4">
+                {project.features.map((feature, index) => (
+                  <span
+                    key={index}
+                    className="text-xs px-3 py-1 rounded-full border border-gray-700 text-gray-300"
+                  >
+                    {feature}
+                  </span>
+                ))}
+              </div>
 
               <div className="flex gap-4 mt-5">
                 <a href={project.live} target="_blank">
