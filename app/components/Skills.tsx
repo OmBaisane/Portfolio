@@ -10,11 +10,11 @@ const skills = [
   },
   {
     title: "Backend",
-    items: ["Node.js", "Express.js", "MongoDB"],
+    items: ["Node.js", "Express.js", "MongoDB", "JWT"],
   },
   {
     title: "Tools",
-    items: ["Git", "GitHub", "Vercel"],
+    items: ["Git", "GitHub", "Vercel", "Cloudinary"],
   },
 ];
 

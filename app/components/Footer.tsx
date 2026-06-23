@@ -29,7 +29,7 @@ export default function Footer() {
       </div>
 
       <p className="mt-4 text-xs text-gray-500">
-        Built with Next.js & Tailwind CSS
+        Built with Next.js, TypeScript & Tailwind CSS
       </p>
     </footer>
   );

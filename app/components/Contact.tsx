@@ -20,8 +20,8 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-gray-300 mb-8"
         >
-          I'm currently open to internship and frontend opportunities. Feel free
-          to reach out.
+          I'm currently open to internships, freelance projects and
+          frontend/full-stack development opportunities. Feel free to reach out.
         </motion.p>
 
         <motion.div
