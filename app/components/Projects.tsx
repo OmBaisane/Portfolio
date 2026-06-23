@@ -5,13 +5,23 @@ import Reveal from "./Reveal";
 
 const projects = [
   {
+    title: "Shiv Fashion Store ⭐",
+    desc: "First client project. A full-stack e-commerce platform featuring product management, order management, admin dashboard, authentication, Cloudinary uploads and production deployment.",
+    tech: "Next.js, TypeScript, MongoDB, Cloudinary",
+    image: "/ShivFashion.png",
+    live: "https://shiv-fashion-store.vercel.app/",
+    github: "https://github.com/OmBaisane/shiv-fashion-store",
+  },
+
+  {
     title: "DevPostify",
-    desc: "A full-stack social platform with authentication, CRUD posts and production deployment.",
+    desc: "A full-stack social platform with authentication, CRUD posts, MongoDB integration and production deployment.",
     tech: "Next.js, MongoDB, Tailwind",
     image: "/DevPostify.PNG",
     live: "https://dev-postify.vercel.app/",
     github: "https://github.com/OmBaisane/DevPostify",
   },
+
   {
     title: "TaskZen",
     desc: "A modern task manager with filtering, persistence and clean UI/UX.",
@@ -28,7 +38,7 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto px-6">
         <Reveal>
           <h2 className="text-3xl font-bold text-center mb-10 tracking-tight">
-            Projects
+            Featured Projects
           </h2>
         </Reveal>
 
@@ -44,7 +54,7 @@ export default function Projects() {
               },
             },
           }}
-          className="grid md:grid-cols-2 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {projects.map((project, i) => (
             <motion.div
@@ -56,7 +66,7 @@ export default function Projects() {
               transition={{ duration: 0.3 }}
               whileHover={{ y: -6 }}
               className={`p-6 rounded-2xl border transition-all duration-300 ${
-                project.title === "DevPostify"
+                project.title.includes("⭐") || project.title === "DevPostify"
                   ? "border-white"
                   : "border-gray-800 hover:border-gray-500"
               }`}
