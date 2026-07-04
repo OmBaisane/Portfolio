@@ -4,7 +4,7 @@ A modern, responsive, and interactive portfolio website showcasing my projects, 
 
 ## 🚀 Live Demo
 
-🔗 https://your-portfolio-link.vercel.app
+🔗 https://portfolio-nine-phi-ry8fa70ws1.vercel.app
 
 ---
 
@@ -95,7 +95,7 @@ My latest resume is available directly from the portfolio website.
 
 ## 📫 Contact
 
-- Portfolio: https://your-portfolio-link.vercel.app
+- Portfolio: https://portfolio-nine-phi-ry8fa70ws1.vercel.app
 - GitHub: https://github.com/OmBaisane
 - LinkedIn: https://www.linkedin.com/in/om-baisane-b96625346
 - Email: ombaisane29@gmail.com
