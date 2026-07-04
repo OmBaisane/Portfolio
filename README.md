@@ -87,12 +87,6 @@ Deployed on **Vercel**
 
 ---
 
-## 📸 Screenshots
-
-> Add desktop and mobile screenshots here.
-
----
-
 ## 📄 Resume
 
 My latest resume is available directly from the portfolio website.
@@ -103,8 +97,8 @@ My latest resume is available directly from the portfolio website.
 
 - Portfolio: https://your-portfolio-link.vercel.app
 - GitHub: https://github.com/OmBaisane
-- LinkedIn: https://linkedin.com/in/your-linkedin
-- Email: your@email.com
+- LinkedIn: https://www.linkedin.com/in/om-baisane-b96625346
+- Email: ombaisane29@gmail.com
 
 ---
 
