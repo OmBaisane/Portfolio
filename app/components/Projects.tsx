@@ -16,6 +16,23 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "DevPostify Nova",
+    featured: true,
+    desc: "A developer-first professional publishing platform for sharing technical knowledge, system architectures and implementations, built with a decoupled Next.js and Express architecture, secure JWT authentication and MongoDB.",
+    features: [
+      "Next.js",
+      "TypeScript",
+      "JWT Auth",
+      "REST API",
+      "MongoDB",
+      "Markdown",
+    ],
+    image: "/DevPostify-Nova.png",
+    live: "https://dev-postify-nova.vercel.app",
+    github: "https://github.com/OmBaisane/DevPostify-Nova",
+  },
+
+  {
     title: "Shiv Fashion Store",
     featured: true,
     client: true,
@@ -29,16 +46,6 @@ const projects: Project[] = [
     image: "/ShivFashion.png",
     live: "https://shiv-fashion-store.vercel.app/",
     github: "https://github.com/OmBaisane/shiv-fashion-store",
-  },
-
-  {
-    title: "DevPostify",
-    featured: true,
-    desc: "A full-stack social platform with authentication, CRUD posts, MongoDB integration and production deployment.",
-    features: ["Authentication", "CRUD Posts", "MongoDB", "Responsive UI"],
-    image: "/DevPostify.PNG",
-    live: "https://dev-postify.vercel.app/",
-    github: "https://github.com/OmBaisane/DevPostify",
   },
 
   {
@@ -126,13 +133,21 @@ export default function Projects() {
               </div>
 
               <div className="flex gap-4 mt-5">
-                <a href={project.live} target="_blank">
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <button className="px-4 py-2 bg-white text-black rounded-lg transition-all duration-300 hover:scale-105">
                     Live
                   </button>
                 </a>
 
-                <a href={project.github} target="_blank">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <button className="px-4 py-2 border border-gray-600 rounded-lg hover:border-gray-400 transition">
                     Code
                   </button>
@@ -142,6 +157,7 @@ export default function Projects() {
           ))}
         </motion.div>
       </div>
+
       <div className="h-px bg-linear-to-r from-transparent via-gray-700 to-transparent mt-16 mb-0" />
     </section>
   );
