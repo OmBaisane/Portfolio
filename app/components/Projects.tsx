@@ -33,6 +33,23 @@ const projects: Project[] = [
   },
 
   {
+    title: "NeoCart Nova",
+    featured: true,
+    desc: "A production-oriented full-stack e-commerce platform with secure authentication, stock-aware checkout, transaction-safe order processing, reviews, inventory management and a dedicated admin portal.",
+    features: [
+      "Next.js 16",
+      "TypeScript",
+      "TanStack Query",
+      "Express.js",
+      "MongoDB",
+      "JWT Auth",
+    ],
+    image: "/NeoCart-Nova.png",
+    live: "https://neo-cart-nova.vercel.app",
+    github: "https://github.com/OmBaisane/NeoCart-Nova",
+  },
+
+  {
     title: "Shiv Fashion Store",
     featured: true,
     client: true,
